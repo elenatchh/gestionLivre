@@ -1,7 +1,9 @@
 <?php 
+  ini_set('display_errors', '1');
+  ini_set('display_startup_errors', '1');
+  error_reporting(E_ALL);
 class Livre{
     private $id,$titre,$auteur,$nbpage,$image;
-    public $livres = [];
     
     public function __construct($id,$titre,$auteur,$nbpage,$image){
 
@@ -10,8 +12,7 @@ class Livre{
         $this->setAuteur($auteur);
         $this->setNbpage($nbpage);
         $this->setImage($image);
-    
-        self::$livres[]=$this;
+
     
     }
 
